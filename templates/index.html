@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 35px;
+            align-items: center;
+            color: aliceblue;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            color: coral;
+            font-size: 20px;
+            font-family: 'Nanum Pen Script', cursive;
+            height: 100%;
+
+        }
+
+        html,
+        body {
+            background-color: #171a19;
+            height: 100%;
+        }
+        @media screen and (max-width: 740px) {
+            .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            color: coral;
+            font-size: 16px;
+            font-family: 'Nanum Pen Script', cursive;
+            height: 100%;
+
+        }
+
+        .button
+        {
+            font-size: 15px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            10 valid card numbers
+        </div>
+
+
+        {% for card in data %}
+        <h1>{{card}}</h1>
+        {% endfor %}
+        <form action="/" method="post">
+            <button style="cursor: pointer; text-decoration: none; font-size: 30px; font-family: 'Josefin Sans', sans-serif; color: black; background-color: darkorange; border: 2px solid black; border-radius: 7px; padding: 4px;">Reload</button>
+        </form>
+    
+        <div class="footer" style="font-family: 'Josefin Sans', sans-serif; color: aliceblue;">
+            Made with ❤️ by Aman Dubey
+        </div>
+    </div>
+</body>
+
+</html>
